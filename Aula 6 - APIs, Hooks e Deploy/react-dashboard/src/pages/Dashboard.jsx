@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Tabs from "../components/Tabs";
 
+import { Button } from "../components/ui/button";
 
 export default function Dashboard() {
 
@@ -35,7 +35,7 @@ const[jogos, setJogos] = useState([]);
 
   return (
     <div className="p-6 flex-1 bg-gray-100">
-        {ligas.map((pegaItem) => (
+            {ligas.map((pegaItem) => (
           <div className="teste" key={pegaItem.idLeague}>
             <a className="verLiga" href="#" onClick={(e) => {
               e.preventDefault()
@@ -44,7 +44,10 @@ const[jogos, setJogos] = useState([]);
               {pegaItem.strLeague}
             </a>
           </div>
+
+
         ))}
+        
         {jogos.map((jogo) => (
           <div className="teste" key={jogo.idEvent}>
             <br></br>
